@@ -22,21 +22,21 @@ def get_window_by_title(title):
     return result_window
 
 
-def Sort_windows(weight=100, height=100, list_windows: list = []) -> bool:
+def Sort_windows(width=100, height=100, list_windows: list = []) -> bool:
 
     if len(list_windows) == 0:
         return False
     for window in list_windows:
         window.activate()
     if len(list_windows) == 1:
-        list_windows[0].resizeTo(weight, height)
+        list_windows[0].resizeTo(width, height)
         list_windows[0].moveTo(0, 0)
         return True
     
     list_windows.sort(key=lambda x: x.left)
     for i in range(len(list_windows)):
-        list_windows[i].resizeTo(weight, height)
-        list_windows[i].moveTo(i * weight, 0)
+        list_windows[i].resizeTo(width, height)
+        list_windows[i].moveTo(i * width, 0)
     return True
 
 
