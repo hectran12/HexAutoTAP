@@ -18,9 +18,6 @@ pip install pyautogui
 # install opencv-python
 echo "Installing opencv-python"
 pip install opencv-python
-# install discord
-echo "Installing discord"
-pip install discord
 
 # end
 echo "Setup completed"
